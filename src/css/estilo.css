@@ -35,7 +35,7 @@ body{
 }
 
 header{
-    background-image: url("/src/img/header.jpg");
+    background-image: url("/src/img/header4.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -94,23 +94,6 @@ nav{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     min-height: calc(700px - 60px);
-}
-
-.header_content{
-    text-align: center;
-    color: var(--white);
-    display: grid;
-    place-content: center;
-    gap: 1rem;
-}
-
-.header_content h1{
-    font-size: 10rem;
-    line-height: 8rem;
-}
-
-.header_content p{
-    letter-spacing: 2px;
 }
 
 .main_container{
@@ -226,31 +209,6 @@ nav{
     margin-right: 2rem;
 }
 
-.countdown{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.square{
-    width: 100px;
-    padding: 1rem;
-    background-color: var(--white);
-    text-align: center;
-    border-radius: 10px;
-}
-
-.square p{
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.square span{
-    font-size: 0.7rem;
-    font-weight: 700;
-}
-
 .banner_content button{
     padding: 1rem 2rem;
     outline: none;
@@ -267,8 +225,274 @@ nav{
 }
 
 .banner_image{
-    background-image: url(../img/image-1.jpg);
+    background-image: url("../img/image2.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.collection_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 5px;
+}
+
+.collection_container img{
+    display: flex;
+}
+
+.collection_image{
+    background-color: var(--white);
+    display: grid;
+    place-content: center;
+}
+
+.collection_image h4{
+    padding: 1rem 2rem 0.5rem 2rem;
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    color: var(--primary-color-dark);
+}
+
+.collection_image p{
+    padding: 0 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.collection_image p del{
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.collection_card{
+    padding: 2rem;
+    background-color: var(--text-dark);
+    color: var(--white);
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.collection_card h4{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+.collection_card p{
+    font-size: .9rem;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+}
+
+.collection_banner{
+    position: relative;
+    grid-area: 2/3/3/5;
+    background-image: url("../img/chuteiras/fenomeno.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.gallery_image{
+    position: relative;
+    isolation: isolate;
+}
+
+.gallery_image::before{
+position: absolute;
+content: "";
+inset: 0;
+background-color: var(--text-dark);
+opacity: .5;
+z-index: 1;
+transition: 0.3s;
+cursor: pointer;
+}
+
+.gallery_image:hover::before{
+    opacity: 0;
+}
+
+.gallery_image:last-child{
+    display: none;
+}
+
+.gallery_image img{
+    display: flex;
+}
+
+.collection_container1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 5px;
+}
+
+.collection_container1 img{
+    display: flex;
+}
+
+.collection_image1{
+    background-color: var(--white);
+    display: grid;
+    place-content: center;
+}
+
+.collection_image1 h4{
+    padding: 1rem 2rem 0.5rem 2rem;
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    color: var(--primary-color-dark);
+}
+
+.collection_image1 p{
+    padding: 0 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.collection_image1 p del{
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.collection_card1{
+    padding: 2rem;
+    background-color: var(--text-dark);
+    color: var(--white);
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.collection_card1 h4{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+.collection_card1 p{
+    font-size: .9rem;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+}
+
+.collection_banner1{
+    position: relative;
+    grid-area: 2/3/3/5;
+    background-image: url("../img/tenis/jordan1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.brands_container{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 5px;
+}
+
+.brand_image{
+    display: grid;
+    place-content: center;
+    aspect-ratio: 1;
+    background-color: var(--white);
+}
+
+.brand_image img{
+    opacity: 0.5;
+    max-width: 120px;
+    transition: 0.3s;
+}
+
+.brand_image:hover img{
+    opacity: 1;
+    cursor: pointer;
+}
+
+footer{
+    background-color: var(--text-dark);
+}
+
+.footer_container{
+    padding: 5rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer_col h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.footer_col p{
+    color: var(--white);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer_col p:hover{
+    color: var(--primary-color);
+}
+
+.footer_socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer_socials span{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 100%;
+    color: var(--text-dark);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer_socials span:hover{
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.footer_bar{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    color: var(--white);
+    border-top: 1px solid var(--extra-light);
+}
+
+.copyright{
+    font-size: .8rem;
+}
+
+.payment_cards{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
 }
