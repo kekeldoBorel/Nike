@@ -496,3 +496,93 @@ footer{
     gap: 1rem;
     font-size: 1.2rem;
 }
+
+@media (width < 1200px) {
+    nav{
+        padding: 1rem;
+    }
+
+    .header_container h1{
+        font-size: 8rem;
+        line-height: 6.5rem;
+    }
+}
+
+@media (width < 900px) {
+    .link:not(.logo){
+        display: none;
+    }
+
+    .service_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .collection_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .collection_container1{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .collection_banner{
+        grid-area: 3/1/4/3;
+    }
+    .collection_banner1{
+        grid-area: 3/1/4/3;
+    }
+
+    .gallery{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery_image:last-child{
+        display: flex;
+    }
+
+    .brands_container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (width < 600px) {
+    .header_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .header_container h1{
+        font-size: 6rem;
+        line-height: 5.5rem;
+    }
+
+    .service_card{
+        padding: 1rem;
+    }
+
+    .collection_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .collection_banner{
+        grid-area: 5/1/6/3;
+    }
+
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery_image:last-child{
+        display: none;
+    }
+
+    .brands_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
